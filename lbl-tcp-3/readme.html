@@ -1,0 +1,81 @@
+
+<!-- saved from url=(0047)file:///C:/Users/XiaoHui/Desktop/LBL-TCP-3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title> LBL-TCP-3 - Two Hours of Wide-Area TCP Traffic
+</title></head><body>
+<!-- @(#) $Header: /home/portnoy/u4/vern/ITA/html/contrib/RCS/LBL-TCP-3.html,v 1.2 2004/04/18 00:35:10 vern Exp $ (LBL)-->
+<h1>
+<em>LBL-TCP-3</em>
+</h1>
+<dl>
+<dt>
+<b>Description</b>
+</dt><dd>
+This trace contains two hours' worth of all wide-area TCP traffic between
+the Lawrence Berkeley Laboratory and the rest of the world.
+</dd><dt>
+<b>Format</b>
+</dt><dd>
+The trace was reduced from
+<a href="ftp://ftp.ee.lbl.gov/tcpdump.tar.Z"><em>tcpdump</em></a>
+format to ASCII using the
+<a href="file:///C:/Users/XiaoHui/Desktop/sanitize.html"> sanitize-tcp</a> and
+<a href="file:///C:/Users/XiaoHui/Desktop/sanitize.html"> sanitize-syn-fin</a> scripts.  The first script
+was used to produce <em>lbl-tcp-3.tcp</em>, which has six columns:
+timestamp, (renumbered) source host, (renumbered) destination host,
+source TCP port, destination TCP port, and number of data bytes (zero
+for "pure-ack" packets).  The second script generated <em>lbl-tcp-3.sf</em>,
+which includes the same first five columns, plus TCP flags (SYN/FIN/RST/PSH
+etc.), sequence number, and acknowledgement number (0 for initial SYN).
+</dd><dt>
+<b>Measurement</b>
+</dt><dd>
+The trace ran from 14:10 to 16:10 on Thursday, January 20, 1994 (times
+are Pacific Standard Time), capturing 1.8 million TCP packets (about 0.0002
+of these were dropped).  The tracing was done on the Ethernet DMZ network over
+which flows all traffic into or out of the Lawrence Berkeley Laboratory,
+located in Berkeley, California.
+The raw trace was made using 
+<a href="ftp://ftp.ee.lbl.gov/tcpdump.tar.Z"><em>tcpdump</em></a>
+on a Sun Sparcstation using the
+<a href="ftp://ftp.ee.lbl.gov/papers/bpf-usenix93.ps.Z">BPF</a>
+kernel packet filter.  Timestamps have microsecond precision.
+</dd><dt>
+<b>Privacy</b>
+</dt><dd>
+The trace has been "sanitized" using the
+<a href="file:///C:/Users/XiaoHui/Desktop/sanitize.html"> sanitize-tcp</a> script.  This means that
+the host IP addresses have been renumbered, and all packet contents
+removed.
+</dd><dt>
+<b>Acknowledgements</b>
+</dt><dd>
+The trace was made by Vern Paxson (<em>vern@ee.lbl.gov</em>).  In publications,
+please include an appropriate citation to the paper mentioned below.
+</dd><dt>
+<b>Publications</b>
+</dt><dd>
+This trace corresponds to <strong>LBL-PKT-3</strong> in the paper
+<a href="ftp://ftp.ee.lbl.gov/papers/WAN-poisson.ps.Z"> Wide-Area Traffic:
+The Failure of Poisson Modeling</a>, V. Paxson and S. Floyd,
+<em>IEEE/ACM Transactions on Networking</em>, 3(3), pp. 226-244, June 1995.
+</dd><dt>
+<b>Related traces</b>
+</dt><dd>
+<a href="file:///C:/Users/XiaoHui/Desktop/LBL-PKT.html"> LBL-PKT </a>.
+</dd><dt>
+<b>Restrictions</b>
+</dt><dd>
+The trace may be freely redistributed.
+</dd><dt>
+<b>Distribution</b>
+</dt><dd>
+Available from the Archive in
+<a href="ftp://ita.ee.lbl.gov/traces/lbl-tcp-3.tar.Z">
+compressed <em>tar</em></a> format (16 MB; 55 MB uncompressed).
+</dd></dl>
+<br><br>
+Up to
+<a href="file:///C:/Users/XiaoHui/traces.html"> Traces In The Internet Traffic Archive</a>.
+
+</body></html>
